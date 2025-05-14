@@ -1,0 +1,5 @@
+echo ".DS_Store
+*.log
+*.tmp
+*.pkt
+__pycache__/" > .gitignore
