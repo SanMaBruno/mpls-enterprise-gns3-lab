@@ -1,0 +1,75 @@
+May 18 17:20:20.253 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+May 18 17:20:20.253 HYPERVISOR: Started on IP = localhost, TCP port = 61706.
+May 18 17:20:20.753 HYPERVISOR: exec_cmd: hypervisor version 
+May 18 17:20:20.753 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\Thinkpad BS\GNS3\projects\Mpls_Enterprise_Network\project-files\dynamips 
+May 18 17:20:20.757 GENERAL: working_dir=C:\Users\Thinkpad BS\GNS3\projects\Mpls_Enterprise_Network\project-files\dynamips
+May 18 17:20:20.757 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\Thinkpad BS\GNS3\projects\Mpls_Enterprise_Network\project-files\dynamips\c9698d78-ce56-4ada-a2ca-1f1a7ae20123 
+May 18 17:20:20.800 GENERAL: working_dir=C:\Users\Thinkpad BS\GNS3\projects\Mpls_Enterprise_Network\project-files\dynamips\c9698d78-ce56-4ada-a2ca-1f1a7ae20123
+May 18 17:20:20.800 HYPERVISOR: exec_cmd: vm create ESW2 2 c3600 
+May 18 17:20:20.808 VM: VM ESW2 created.
+May 18 17:20:20.808 HYPERVISOR: exec_cmd: vm set_con_tcp_port ESW2 5001 
+May 18 17:20:20.808 HYPERVISOR: exec_cmd: c3600 get_mac_addr ESW2 
+May 18 17:20:20.812 HYPERVISOR: exec_cmd: vm set_ios ESW2 C:/Users/Thinkpad BS/GNS3/images/IOS/c3640-jk9s-mz.124-16.image 
+May 18 17:20:20.812 HYPERVISOR: exec_cmd: vm get_status ESW2 
+May 18 17:20:20.812 HYPERVISOR: exec_cmd: vm set_idle_pc ESW2 0x604f5184 
+May 18 17:20:20.812 HYPERVISOR: exec_cmd: vm set_exec_area ESW2 64 
+May 18 17:20:20.816 HYPERVISOR: exec_cmd: vm set_ram ESW2 256 
+May 18 17:20:20.816 HYPERVISOR: exec_cmd: vm set_nvram ESW2 256 
+May 18 17:20:20.820 HYPERVISOR: exec_cmd: vm set_disk0 ESW2 1 
+May 18 17:20:20.820 HYPERVISOR: exec_cmd: vm get_status ESW2 
+May 18 17:20:20.820 HYPERVISOR: exec_cmd: vm slot_add_binding ESW2 1 0 NM-16ESW 
+May 18 17:20:20.892 HYPERVISOR: exec_cmd: vm set_ios ESW2 C:/Users/Thinkpad BS/GNS3/images/IOS/c3640-jk9s-mz.124-16.image 
+May 18 17:21:18.842 HYPERVISOR: exec_cmd: nio create_udp udp-1b2d7bb8-6b49-4756-acb5-7cb175ba5bb2 10010 127.0.0.1 10011 
+May 18 17:21:19.122 HYPERVISOR: exec_cmd: vm slot_add_nio_binding ESW2 1 0 udp-1b2d7bb8-6b49-4756-acb5-7cb175ba5bb2 
+May 18 17:21:19.122 HYPERVISOR: exec_cmd: vm get_status ESW2 
+May 18 17:25:34.436 HYPERVISOR: exec_cmd: nio create_udp udp-31a7834e-9d7f-45e3-8940-b642d922164a 10050 127.0.0.1 10051 
+May 18 17:25:34.440 HYPERVISOR: exec_cmd: vm slot_add_nio_binding ESW2 1 1 udp-31a7834e-9d7f-45e3-8940-b642d922164a 
+May 18 17:25:34.440 HYPERVISOR: exec_cmd: vm get_status ESW2 
+May 18 17:25:39.081 HYPERVISOR: exec_cmd: nio create_udp udp-409c957c-a558-4c81-945a-bcc57767bff8 10054 127.0.0.1 10055 
+May 18 17:25:39.085 HYPERVISOR: exec_cmd: vm slot_add_nio_binding ESW2 1 2 udp-409c957c-a558-4c81-945a-bcc57767bff8 
+May 18 17:25:39.085 HYPERVISOR: exec_cmd: vm get_status ESW2 
+May 18 17:25:42.799 HYPERVISOR: exec_cmd: nio create_udp udp-b05ff224-11f6-4219-8c0c-a7ab30c5b373 10058 127.0.0.1 10059 
+May 18 17:25:42.803 HYPERVISOR: exec_cmd: vm slot_add_nio_binding ESW2 1 3 udp-b05ff224-11f6-4219-8c0c-a7ab30c5b373 
+May 18 17:25:42.803 HYPERVISOR: exec_cmd: vm get_status ESW2 
+May 18 17:26:04.740 HYPERVISOR: exec_cmd: vm create Ghost 0 c3600 
+May 18 17:26:04.744 VM: VM Ghost created.
+May 18 17:26:04.744 HYPERVISOR: exec_cmd: vm set_ios Ghost C:/Users/Thinkpad BS/GNS3/images/IOS/c3640-jk9s-mz.124-16.image 
+May 18 17:26:04.744 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+May 18 17:26:04.744 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost C:\Users\Thinkpad BS\GNS3\projects\Mpls_Enterprise_Network\project-files\dynamips\c3640-jk9s-mz.124-16.image-256.ghost 
+May 18 17:26:04.748 HYPERVISOR: exec_cmd: vm set_ram Ghost 256 
+May 18 17:26:04.748 HYPERVISOR: exec_cmd: vm get_status Ghost 
+May 18 17:26:04.748 HYPERVISOR: exec_cmd: vm set_config Ghost configs\i0_startup-config.cfg 
+May 18 17:26:04.748 HYPERVISOR: exec_cmd: vm start Ghost 
+May 18 17:26:05.178 HYPERVISOR: exec_cmd: vm get_status Ghost 
+May 18 17:26:05.182 HYPERVISOR: exec_cmd: vm stop Ghost 
+May 18 17:26:05.441 VM: VM Ghost shutdown.
+May 18 17:26:05.441 HYPERVISOR: exec_cmd: vm extract_config Ghost 
+May 18 17:26:05.441 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+May 18 17:26:05.445 VM: VM Ghost destroyed.
+May 18 17:26:05.453 HYPERVISOR: exec_cmd: vm set_ghost_status ESW2 2 
+May 18 17:26:05.457 HYPERVISOR: exec_cmd: vm set_ghost_file ESW2 C:\Users\Thinkpad BS\GNS3\projects\Mpls_Enterprise_Network\project-files\dynamips\c3640-jk9s-mz.124-16.image-256.ghost 
+May 18 17:26:05.457 HYPERVISOR: exec_cmd: vm get_status ESW2 
+May 18 17:26:05.461 HYPERVISOR: exec_cmd: vm set_config ESW2 configs\i2_startup-config.cfg 
+May 18 17:26:05.461 HYPERVISOR: exec_cmd: vm start ESW2 
+May 18 17:26:35.765 HYPERVISOR: exec_cmd: vm extract_config ESW2 
+May 18 17:40:36.017 HYPERVISOR: exec_cmd: vm extract_config ESW2 
+May 18 17:42:50.938 HYPERVISOR: exec_cmd: vm get_status ESW2 
+May 18 17:42:50.939 HYPERVISOR: exec_cmd: vm slot_disable_nio ESW2 1 2 
+May 18 17:42:50.945 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding ESW2 1 2 
+May 18 17:42:50.947 HYPERVISOR: exec_cmd: nio delete udp-409c957c-a558-4c81-945a-bcc57767bff8 
+May 18 17:43:09.139 HYPERVISOR: exec_cmd: nio create_udp udp-09be8692-25a1-4fb2-af26-182a0a748d49 10054 127.0.0.1 10055 
+May 18 17:43:09.141 HYPERVISOR: exec_cmd: vm slot_add_nio_binding ESW2 1 2 udp-09be8692-25a1-4fb2-af26-182a0a748d49 
+May 18 17:43:09.142 HYPERVISOR: exec_cmd: vm get_status ESW2 
+May 18 17:43:09.142 HYPERVISOR: exec_cmd: vm slot_enable_nio ESW2 1 2 
+May 18 18:16:31.994 HYPERVISOR: exec_cmd: vm get_status ESW2 
+May 18 18:16:31.994 HYPERVISOR: exec_cmd: vm stop ESW2 
+May 18 18:16:32.230 VM: VM ESW2 shutdown.
+May 18 18:16:32.231 HYPERVISOR: exec_cmd: vm extract_config ESW2 
+May 18 18:17:00.009 HYPERVISOR: exec_cmd: vm set_ios ESW2 C:/Users/Thinkpad BS/GNS3/images/IOS/c3640-jk9s-mz.124-16.image 
+May 18 18:17:00.009 HYPERVISOR: exec_cmd: vm rename ESW2 SwitchB 
+May 18 18:17:00.084 HYPERVISOR: exec_cmd: vm set_ios SwitchB C:/Users/Thinkpad BS/GNS3/images/IOS/c3640-jk9s-mz.124-16.image 
+May 18 18:21:19.704 HYPERVISOR: exec_cmd: vm set_ghost_status SwitchB 2 
+May 18 18:21:19.710 HYPERVISOR: exec_cmd: vm set_ghost_file SwitchB C:\Users\Thinkpad BS\GNS3\projects\Mpls_Enterprise_Network\project-files\dynamips\c3640-jk9s-mz.124-16.image-256.ghost 
+May 18 18:21:19.711 HYPERVISOR: exec_cmd: vm get_status SwitchB 
+May 18 18:21:19.717 HYPERVISOR: exec_cmd: vm set_config SwitchB configs\i2_startup-config.cfg 
+May 18 18:21:19.718 HYPERVISOR: exec_cmd: vm start SwitchB 

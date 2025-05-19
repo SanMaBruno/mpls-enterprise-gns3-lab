@@ -1,0 +1,21 @@
+# Archivos temporales y de GNS3
+*.net
+*.cfg
+*.unl
+*.log
+*.bak
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Backups
+*.tmp
+~$*
+
+# Archivos de respaldo GNS3
+*.gns3project.backup
+
+# Otros
+*.swp
+*.swo

@@ -1,0 +1,59 @@
+May 18 17:20:29.216 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+May 18 17:20:29.216 HYPERVISOR: Started on IP = localhost, TCP port = 61728.
+May 18 17:20:29.714 HYPERVISOR: exec_cmd: hypervisor version 
+May 18 17:20:29.718 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\Thinkpad BS\GNS3\projects\Mpls_Enterprise_Network\project-files\dynamips 
+May 18 17:20:29.718 GENERAL: working_dir=C:\Users\Thinkpad BS\GNS3\projects\Mpls_Enterprise_Network\project-files\dynamips
+May 18 17:20:29.718 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\Thinkpad BS\GNS3\projects\Mpls_Enterprise_Network\project-files\dynamips\c9e9bb24-80ae-432c-a556-a085b0830fb4 
+May 18 17:20:29.765 GENERAL: working_dir=C:\Users\Thinkpad BS\GNS3\projects\Mpls_Enterprise_Network\project-files\dynamips\c9e9bb24-80ae-432c-a556-a085b0830fb4
+May 18 17:20:29.765 HYPERVISOR: exec_cmd: vm create R2 5 c3725 
+May 18 17:20:29.769 VM: VM R2 created.
+May 18 17:20:29.769 HYPERVISOR: exec_cmd: vm set_con_tcp_port R2 5004 
+May 18 17:20:29.769 HYPERVISOR: exec_cmd: c3725 get_mac_addr R2 
+May 18 17:20:29.773 HYPERVISOR: exec_cmd: vm set_ios R2 C:/Users/Thinkpad BS/GNS3/images/IOS/c3725-adventerprisek9-mz.124-15.T14.image 
+May 18 17:20:29.773 HYPERVISOR: exec_cmd: vm get_status R2 
+May 18 17:20:29.773 HYPERVISOR: exec_cmd: vm set_idle_pc R2 0x60c09aa0 
+May 18 17:20:29.777 HYPERVISOR: exec_cmd: vm set_exec_area R2 64 
+May 18 17:20:29.777 HYPERVISOR: exec_cmd: vm set_nvram R2 256 
+May 18 17:20:29.781 HYPERVISOR: exec_cmd: vm set_disk0 R2 0 
+May 18 17:20:29.781 HYPERVISOR: exec_cmd: vm get_status R2 
+May 18 17:20:29.781 HYPERVISOR: exec_cmd: vm slot_add_binding R2 1 0 NM-1FE-TX 
+May 18 17:20:29.785 HYPERVISOR: exec_cmd: vm get_status R2 
+May 18 17:20:29.785 HYPERVISOR: exec_cmd: vm slot_add_binding R2 2 0 NM-1FE-TX 
+May 18 17:20:29.857 HYPERVISOR: exec_cmd: vm set_ios R2 C:/Users/Thinkpad BS/GNS3/images/IOS/c3725-adventerprisek9-mz.124-15.T14.image 
+May 18 17:21:18.568 HYPERVISOR: exec_cmd: nio create_udp udp-591c1782-328a-470f-850c-8845b221674b 10008 127.0.0.1 10009 
+May 18 17:21:18.834 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 2 0 udp-591c1782-328a-470f-850c-8845b221674b 
+May 18 17:21:18.834 HYPERVISOR: exec_cmd: vm get_status R2 
+May 18 17:21:34.485 HYPERVISOR: exec_cmd: nio create_udp udp-4b4c9867-0b83-48eb-87d1-a81e51bc7a64 10020 127.0.0.1 10021 
+May 18 17:21:34.530 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 0 udp-4b4c9867-0b83-48eb-87d1-a81e51bc7a64 
+May 18 17:21:34.530 HYPERVISOR: exec_cmd: vm get_status R2 
+May 18 17:24:30.949 HYPERVISOR: exec_cmd: nio create_udp udp-89111707-1525-41ea-a5fc-b16100e87186 10032 127.0.0.1 10033 
+May 18 17:24:30.953 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 1 0 udp-89111707-1525-41ea-a5fc-b16100e87186 
+May 18 17:24:30.953 HYPERVISOR: exec_cmd: vm get_status R2 
+May 18 17:26:06.452 HYPERVISOR: exec_cmd: vm set_ghost_status R2 2 
+May 18 17:26:06.460 HYPERVISOR: exec_cmd: vm set_ghost_file R2 C:\Users\Thinkpad BS\GNS3\projects\Mpls_Enterprise_Network\project-files\dynamips\c3725-adventerprisek9-mz.124-15.T14.image-128.ghost 
+May 18 17:26:06.464 HYPERVISOR: exec_cmd: vm get_status R2 
+May 18 17:26:06.472 HYPERVISOR: exec_cmd: vm set_config R2 configs\i5_startup-config.cfg 
+May 18 17:26:06.472 HYPERVISOR: exec_cmd: vm start R2 
+May 18 17:26:36.815 HYPERVISOR: exec_cmd: vm extract_config R2 
+May 18 17:26:36.839 HYPERVISOR: exec_cmd: vm extract_config R2 
+May 18 17:26:42.344 HYPERVISOR: exec_cmd: vm set_ios R2 C:/Users/Thinkpad BS/GNS3/images/IOS/c3725-adventerprisek9-mz.124-15.T14.image 
+May 18 17:40:07.062 HYPERVISOR: exec_cmd: vm extract_config R2 
+May 18 17:40:07.114 HYPERVISOR: exec_cmd: vm extract_config R2 
+May 18 17:55:37.477 HYPERVISOR: exec_cmd: vm extract_config R2 
+May 18 17:55:37.533 HYPERVISOR: exec_cmd: vm extract_config R2 
+May 18 18:08:37.741 HYPERVISOR: exec_cmd: vm extract_config R2 
+May 18 18:08:37.794 HYPERVISOR: exec_cmd: vm extract_config R2 
+May 18 18:16:32.241 HYPERVISOR: exec_cmd: vm get_status R2 
+May 18 18:16:32.242 HYPERVISOR: exec_cmd: vm stop R2 
+May 18 18:16:32.406 VM: VM R2 shutdown.
+May 18 18:16:32.407 HYPERVISOR: exec_cmd: vm extract_config R2 
+May 18 18:16:39.675 HYPERVISOR: exec_cmd: vm set_ios R2 C:/Users/Thinkpad BS/GNS3/images/IOS/c3725-adventerprisek9-mz.124-15.T14.image 
+May 18 18:16:39.676 HYPERVISOR: exec_cmd: vm rename R2 RouterB 
+May 18 18:16:39.754 HYPERVISOR: exec_cmd: vm set_ios RouterB C:/Users/Thinkpad BS/GNS3/images/IOS/c3725-adventerprisek9-mz.124-15.T14.image 
+May 18 18:21:20.056 HYPERVISOR: exec_cmd: vm set_ghost_status RouterB 2 
+May 18 18:21:20.064 HYPERVISOR: exec_cmd: vm set_ghost_file RouterB C:\Users\Thinkpad BS\GNS3\projects\Mpls_Enterprise_Network\project-files\dynamips\c3725-adventerprisek9-mz.124-15.T14.image-128.ghost 
+May 18 18:21:20.064 HYPERVISOR: exec_cmd: vm get_status RouterB 
+May 18 18:21:20.071 HYPERVISOR: exec_cmd: vm set_config RouterB configs\i5_startup-config.cfg 
+May 18 18:21:20.072 HYPERVISOR: exec_cmd: vm start RouterB 
+May 18 18:21:50.428 HYPERVISOR: exec_cmd: vm extract_config RouterB 
+May 18 18:21:50.477 HYPERVISOR: exec_cmd: vm extract_config RouterB 

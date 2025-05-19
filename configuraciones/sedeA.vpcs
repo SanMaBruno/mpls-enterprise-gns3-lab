@@ -1,0 +1,13 @@
+# Script para configurar los VPCS de la Sede A
+
+# IT_A (VPCS1)
+ip 192.168.10.10 192.168.10.1 255.255.255.0
+save
+
+# Contabilidad_A (VPCS2)
+ip 192.168.20.10 192.168.20.1 255.255.255.0
+save
+
+# RRHH_A (VPCS3)
+ip 192.168.30.10 192.168.30.1 255.255.255.0
+save

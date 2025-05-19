@@ -1,0 +1,13 @@
+# Script para configurar los VPCS de la Sede C
+
+# IT_C (VPCS7)
+ip 192.168.210.10 192.168.210.1 255.255.255.0
+save
+
+# Contabilidad_C (VPCS8)
+ip 192.168.220.10 192.168.220.1 255.255.255.0
+save
+
+# RRHH_C (VPCS9)
+ip 192.168.230.10 192.168.230.1 255.255.255.0
+save

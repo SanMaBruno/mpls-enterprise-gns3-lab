@@ -1,0 +1,217 @@
+===============================
+🚀 CONFIGURACIÓN COMPLETA DEL LABORATORIO MPLS + OSPF
+===============================
+Autor: Bruno San Martín Navarro  
+Fecha: [Reemplaza con la fecha actual]  
+Dispositivos: RouterA, RouterB, RouterC + SwitchA, SwitchB, SwitchC  
+Propósito: Red empresarial con segmentación VLAN, enrutamiento OSPF y backbone MPLS
+
+===================================================
+🔧 ROUTER A – Configuración
+===================================================
+hostname RouterA
+!
+interface FastEthernet0/0
+ ip address 10.0.0.1 255.255.255.252
+ mpls ip
+ no shutdown
+!
+interface FastEthernet1/0
+ ip address 10.0.0.5 255.255.255.252
+ mpls ip
+ no shutdown
+!
+interface FastEthernet2/0
+ no shutdown
+!
+interface FastEthernet2/0.10
+ encapsulation dot1Q 10
+ ip address 192.168.10.1 255.255.255.0
+!
+interface FastEthernet2/0.20
+ encapsulation dot1Q 20
+ ip address 192.168.20.1 255.255.255.0
+!
+interface FastEthernet2/0.30
+ encapsulation dot1Q 30
+ ip address 192.168.30.1 255.255.255.0
+!
+router ospf 1
+ network 10.0.0.0 0.0.0.255 area 0
+ network 192.168.10.0 0.0.0.255 area 0
+ network 192.168.20.0 0.0.0.255 area 0
+ network 192.168.30.0 0.0.0.255 area 0
+!
+mpls label protocol ldp
+
+===================================================
+🔧 ROUTER B – Configuración
+===================================================
+hostname RouterB
+!
+interface FastEthernet0/0
+ ip address 10.0.0.2 255.255.255.252
+ mpls ip
+ no shutdown
+!
+interface FastEthernet1/0
+ ip address 10.0.0.9 255.255.255.252
+ mpls ip
+ no shutdown
+!
+interface FastEthernet2/0
+ no shutdown
+!
+interface FastEthernet2/0.110
+ encapsulation dot1Q 110
+ ip address 192.168.110.1 255.255.255.0
+!
+interface FastEthernet2/0.120
+ encapsulation dot1Q 120
+ ip address 192.168.120.1 255.255.255.0
+!
+interface FastEthernet2/0.130
+ encapsulation dot1Q 130
+ ip address 192.168.130.1 255.255.255.0
+!
+router ospf 1
+ network 10.0.0.0 0.0.0.255 area 0
+ network 192.168.110.0 0.0.0.255 area 0
+ network 192.168.120.0 0.0.0.255 area 0
+ network 192.168.130.0 0.0.0.255 area 0
+!
+mpls label protocol ldp
+
+===================================================
+🔧 ROUTER C – Configuración
+===================================================
+hostname RouterC
+!
+interface FastEthernet0/0
+ ip address 10.0.0.10 255.255.255.252
+ mpls ip
+ no shutdown
+!
+interface FastEthernet1/0
+ ip address 10.0.0.6 255.255.255.252
+ mpls ip
+ no shutdown
+!
+interface FastEthernet2/0
+ no shutdown
+!
+interface FastEthernet2/0.210
+ encapsulation dot1Q 210
+ ip address 192.168.210.1 255.255.255.0
+!
+interface FastEthernet2/0.220
+ encapsulation dot1Q 220
+ ip address 192.168.220.1 255.255.255.0
+!
+interface FastEthernet2/0.230
+ encapsulation dot1Q 230
+ ip address 192.168.230.1 255.255.255.0
+!
+router ospf 1
+ network 10.0.0.0 0.0.0.255 area 0
+ network 192.168.210.0 0.0.0.255 area 0
+ network 192.168.220.0 0.0.0.255 area 0
+ network 192.168.230.0 0.0.0.255 area 0
+!
+mpls label protocol ldp
+
+===================================================
+🔧 SWITCH A – Configuración (NM-16ESW)
+===================================================
+hostname SwitchA
+!
+vlan database
+ vlan 10 name IT_A
+ vlan 20 name Contabilidad_A
+ vlan 30 name RRHH_A
+exit
+!
+interface FastEthernet1/1
+ switchport mode access
+ switchport access vlan 10
+ no shutdown
+!
+interface FastEthernet1/2
+ switchport mode access
+ switchport access vlan 20
+ no shutdown
+!
+interface FastEthernet1/3
+ switchport mode access
+ switchport access vlan 30
+ no shutdown
+!
+interface FastEthernet1/0
+ switchport mode trunk
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 10,20,30
+ no shutdown
+
+===================================================
+🔧 SWITCH B – Configuración (NM-16ESW)
+===================================================
+hostname SwitchB
+!
+vlan database
+ vlan 110 name IT_B
+ vlan 120 name Contabilidad_B
+ vlan 130 name RRHH_B
+exit
+!
+interface FastEthernet1/1
+ switchport mode access
+ switchport access vlan 110
+ no shutdown
+!
+interface FastEthernet1/2
+ switchport mode access
+ switchport access vlan 120
+ no shutdown
+!
+interface FastEthernet1/3
+ switchport mode access
+ switchport access vlan 130
+ no shutdown
+!
+interface FastEthernet1/0
+ switchport mode trunk
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 110,120,130
+ no shutdown
+
+===================================================
+🔧 SWITCH C – Configuración (NM-16ESW)
+===================================================
+hostname SwitchC
+!
+vlan database
+ vlan 210 name IT_C
+ vlan 220 name Contabilidad_C
+ vlan 230 name RRHH_C
+exit
+!
+interface FastEthernet1/1
+ switchport mode access
+ switchport access vlan 210
+ no shutdown
+!
+interface FastEthernet1/2
+ switchport mode access
+ switchport access vlan 220
+ no shutdown
+!
+interface FastEthernet1/3
+ switchport mode access
+ switchport access vlan 230
+ no shutdown
+!
+interface FastEthernet1/0
+ switchport mode trunk
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 210,220,230
+ no shutdown
