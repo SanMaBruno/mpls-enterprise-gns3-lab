@@ -1,6 +1,6 @@
 # 🏢 MPLS Enterprise Network Lab – Proyecto de Simulación Profesional en GNS3
 
-Este repositorio contiene un laboratorio técnico de simulación de una red empresarial de tres sedes interconectadas mediante un backbone MPLS y enrutamiento dinámico OSPF. El proyecto fue desarrollado siguiendo principios de diseño profesional (Clean Code, SOLID) y buenas prácticas de documentación técnica.
+Este repositorio contiene un laboratorio técnico de simulación de una red empresarial de tres sedes interconectadas mediante un backbone MPLS y enrutamiento dinámico OSPF. El proyecto fue desarrollado siguiendo principios de diseño profesional y buenas prácticas de documentación técnica.
 
 ---
 
