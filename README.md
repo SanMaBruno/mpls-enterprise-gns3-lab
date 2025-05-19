@@ -44,16 +44,6 @@ Mpls_Enterprise_Network_Lab/
     └── red-empresarial.gns3project
 ```
 
-
-### 🛠 Paso 2: Guardar ese contenido
-
-Crea el archivo `README.md` en la raíz de tu proyecto:
-
-1. Abre un editor (VS Code, Bloc de notas, etc.)
-2. Pega el contenido anterior
-3. Guárdalo como:  
-```plaintext
-```
 ## 🖼️ Topología de Red Empresarial
 
 ![Topología MPLS](topologia/topologia-red-mpls.png)
